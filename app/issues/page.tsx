@@ -6,6 +6,8 @@ import IssueActions from './IssueActions';
 import { notFound } from 'next/navigation';
 import Link from '../components/Link';
 
+export const dynamic = 'force-dynamic';
+
 const IssuesPage = async () => {
 	
 	const issues = await prisma.issue.findMany();
